@@ -1,9 +1,8 @@
-import Markdown from 'markdown-to-jsx'
-import getPostMetadata from '@/components/GetPostMetadataFunc'
-import getPostContent from '@/components/GetPostConetneFunc'
+import PostMetadataFunc from '@/module/functions/PostMetadata'
+import PostContentLay from '@/module/layouts/PostContent'
 
 export const generateStaticParams = async () => {
-    const posts = getPostMetadata()
+    const posts = PostMetadataFunc()
     return posts.map((post) => ({
         slug: post.slug,
     }))
@@ -11,13 +10,8 @@ export const generateStaticParams = async () => {
 
 const PostContent = (props: any) => {
     const slug = props.params.slug
-    const post = getPostContent(slug)
-    return (
-        <div>
-            <h1>{post.data.title}</h1>
-            <Markdown>{post.content}</Markdown>
-        </div>
-    )
+    const PostContent = ( <PostContentLay slug={slug} /> )
+    return <div>{PostContent}</div>
 }
 
 export default PostContent;

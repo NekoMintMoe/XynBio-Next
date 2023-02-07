@@ -1,7 +1,7 @@
 import matter from 'gray-matter'
 import fs from 'fs'
 
-const getPostContent = (slug: string) => {
+const PostContent = (slug: string) => {
     const folder = 'posts'
     const file = `${folder}/${slug}.md`
     const content = fs.readFileSync(file, 'utf8')
@@ -9,4 +9,4 @@ const getPostContent = (slug: string) => {
     return metadata
 }
 
-export default getPostContent
+export default PostContent

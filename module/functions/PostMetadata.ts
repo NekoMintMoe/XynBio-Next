@@ -1,8 +1,8 @@
-import { PostMetadataStruct } from "./PostMetadataStruct"
+import { PostMetadata } from "../structures/PostMetadata"
 import fs from 'fs'
 import matter from "gray-matter"
 
-const getPostMetadata = (): PostMetadataStruct[] => {
+const PostMetadata = (): PostMetadata[] => {
     const folder = "posts"
     const files = fs.readdirSync(folder)
     const mdPosts = files.filter((file) => file.endsWith(".md"))
@@ -24,4 +24,4 @@ const getPostMetadata = (): PostMetadataStruct[] => {
     return postMetadata
 }
 
-export default getPostMetadata
+export default PostMetadata
