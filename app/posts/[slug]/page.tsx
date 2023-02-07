@@ -1,19 +1,23 @@
-import fs from 'fs'
 import Markdown from 'markdown-to-jsx'
+import getPostMetadata from '@/components/GetPostMetadataFunc'
+import getPostContent from '@/components/GetPostConetneFunc'
 
-const getPostContent = (slug: string) => {
-    const folder = 'posts/'
-    const file = `${folder}${slug}.md`
-    const content = fs.readFileSync(file, 'utf8')
-    return content
+export const generateStaticParams = async () => {
+    const posts = getPostMetadata()
+    return posts.map((post) => ({
+        slug: post.slug,
+    }))
 }
 
-const PostPage = (props: any) => {
+const PostContent = (props: any) => {
     const slug = props.params.slug
-    const content = getPostContent(slug)
+    const post = getPostContent(slug)
     return (
-        <Markdown>{content}</Markdown>
+        <div>
+            <h1>{post.data.title}</h1>
+            <Markdown>{post.content}</Markdown>
+        </div>
     )
 }
 
-export default PostPage;
+export default PostContent;

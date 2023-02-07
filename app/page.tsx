@@ -1,5 +1,11 @@
+import Link from "next/link"
+
 const HomePage = () => {
-    return <h1>Hello World!</h1>
+    return (
+        <Link href="/posts">
+            <h1>GOTO POSTS</h1>
+        </Link>
+    )
 }
 
 export default HomePage
