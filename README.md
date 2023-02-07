@@ -13,3 +13,7 @@ Start Dev Server
 npm install
 npm run dev
 ```
+
+### License
+
+The open source repository is only for REFERENCE and STUDY, and the ownership belongs to XynBio. Please do not IMITATE or COPY without PERMISSION.
