@@ -1,5 +1,5 @@
-import PostMetadataFunc from '@/core/functions/PostMetadata'
-import PostContentLay from '@/core/layouts/PostContent'
+import PostMetadataFunc from '@/core/functions/blog/PostMetadata'
+import PostContentLay from '@/core/layouts/blog/PostContent'
 
 export const generateStaticParams = async () => {
     const posts = PostMetadataFunc()

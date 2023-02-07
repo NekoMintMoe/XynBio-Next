@@ -1,11 +1,9 @@
 import Link from "next/link"
 
-const HomePage = () => {
+const Index = () => {
     return (
-        <Link href="/posts">
-            <p className="text-5xl font-bold">GOTO POSTS</p>
-        </Link>
+        <meta httpEquiv="refresh" content="0;url=/home" />
     )
 }
 
-export default HomePage
+export default Index
