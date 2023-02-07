@@ -1,4 +1,4 @@
-import { PostMetadata } from "../structures/PostMetadata"
+import { PostMetadata } from "@/core/modules/PostMetadata"
 import fs from 'fs'
 import matter from "gray-matter"
 

@@ -1,5 +1,5 @@
-import HeaderLay from "@/module/layouts/Header"
-import FooterLay from "@/module/layouts/Footer"
+import HeaderLay from "@/core/layouts/Header"
+import FooterLay from "@/core/layouts/Footer"
 
 export default function RootLayout({
   children,

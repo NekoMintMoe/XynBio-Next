@@ -1,4 +1,4 @@
-import PostContentFunc from '@/module/functions/PostContent'
+import PostContentFunc from '@/core/functions/PostContent'
 import Markdown from 'markdown-to-jsx'
 
 const PostContent = (props: any) => {

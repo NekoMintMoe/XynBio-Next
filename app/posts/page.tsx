@@ -1,5 +1,5 @@
-import PostMetadataFunc from '@/module/functions/PostMetadata'
-import PostPreviewListLay from '@/module/layouts/PostPreviewList'
+import PostMetadataFunc from '@/core/functions/PostMetadata'
+import PostPreviewListLay from '@/core/layouts/PostPreviewList'
 
 const PostPage = () => {
     const postMetadata = PostMetadataFunc()

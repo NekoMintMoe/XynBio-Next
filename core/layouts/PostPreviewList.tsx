@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import PostMetadataFunc from '../functions/PostMetadata'
+import PostMetadataFunc from '@/core/functions/PostMetadata'
 
 const PostPreviewList = (props: PostMetadataFunc) => {
     return <div>
