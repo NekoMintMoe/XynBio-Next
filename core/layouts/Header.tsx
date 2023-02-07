@@ -4,9 +4,9 @@ const Header = () => {
     return <header>
       <div>
         <Link href="/">
-          <h1>XynBio Next</h1>
+          <p className="text-3xl font-bold">XynBio Next</p>
         </Link>
-        <p>NextJS!</p>
+        <p className="text-2xl">NextJS!</p>
         <br />
       </div>
     </header>

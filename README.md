@@ -4,6 +4,7 @@
 
 - NodeJS 18
 - NextJS 13
+- Tailwind 3
 
 ### Get Start
 

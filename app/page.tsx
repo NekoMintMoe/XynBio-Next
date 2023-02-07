@@ -3,7 +3,7 @@ import Link from "next/link"
 const HomePage = () => {
     return (
         <Link href="/posts">
-            <h1>GOTO POSTS</h1>
+            <p className="text-5xl font-bold">GOTO POSTS</p>
         </Link>
     )
 }
