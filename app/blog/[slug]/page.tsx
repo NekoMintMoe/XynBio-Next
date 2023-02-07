@@ -1,5 +1,6 @@
 import PostMetadataFunc from '@/core/functions/blog/PostMetadata'
 import PostContentLay from '@/core/layouts/blog/PostContent'
+import PostContentFunc from '@/core/functions/blog/PostContent'
 
 export const generateStaticParams = async () => {
     const posts = PostMetadataFunc()
@@ -9,8 +10,8 @@ export const generateStaticParams = async () => {
 }
 
 const PostContent = (props: any) => {
-    const slug = props.params.slug
-    const PostContent = ( <PostContentLay slug={slug} /> )
+    const post = PostContentFunc(props.params.slug)
+    const PostContent = ( <PostContentLay post={post} /> )
     return <div>{PostContent}</div>
 }
 
