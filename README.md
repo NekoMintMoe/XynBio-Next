@@ -1,1 +1,4 @@
-### The next gen of XynBio Website
+## Next generation of XynBio site
+
+- NodeJS 18
+- NextJS 13
