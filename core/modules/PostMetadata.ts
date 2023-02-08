@@ -5,4 +5,5 @@ export interface PostMetadata {
     author: string
     keyword: string
     slug: string
+    content: string
 }

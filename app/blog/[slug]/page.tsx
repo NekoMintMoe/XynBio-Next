@@ -9,10 +9,12 @@ export const generateStaticParams = async () => {
     }))
 }
 
-const PostContent = (props: any) => {
-    const post = PostContentFunc(props.params.slug)
-    const PostContent = ( <PostContentLay post={post} /> )
-    return <div>{PostContent}</div>
+const BlogContent = (props: any) => {
+    const postMetadata = PostContentFunc(props.params.slug)
+    const postContent = postMetadata.map((metadata) => (
+        <PostContentLay key={metadata.slug} {...metadata} />
+    ))
+    return <div>{postContent}</div>
 }
 
-export default PostContent;
+export default BlogContent;

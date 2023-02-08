@@ -1,12 +1,13 @@
-import Markdown from 'markdown-to-jsx'
+'use client'
+import MuiMarkdown from 'mui-markdown';
+import PostContentFunc from '@/core/functions/blog/PostContent'
+import { Typography } from '@mui/joy'
 
-const PostContent = (props: any) => {
+const PostContent = (props: PostContentFunc) => {
     return (
         <div>
-            <p className="text-3xl text-lime-500 font-bold">{props.post.data.title}</p>
-            <article className="prose lg:prose-xl">
-                <Markdown>{props.post.content}</Markdown>
-            </article>
+            <Typography fontSize="xl">{props.title}</Typography>
+            <MuiMarkdown>{props.content}</MuiMarkdown>
         </div>
     )
 }

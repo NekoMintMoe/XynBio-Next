@@ -1,14 +1,16 @@
+'use client'
 import Link from 'next/link'
 import PostMetadataFunc from '@/core/functions/blog/PostMetadata'
+import { Typography } from '@mui/joy'
 
 const PostPreviewList = (props: PostMetadataFunc) => {
     return (
         <div>
             <Link href={`/blog/${props.slug}`}>
-                <p>{props.title}</p>
+                <Typography fontSize="xl">{props.title}</Typography>
             </Link>
-            <p>Subtitle: {props.subtitle}</p>
-            <p>Date: {props.date} Author: {props.author}</p>
+            <Typography>Subtitle: {props.subtitle}</Typography>
+            <Typography>Date: {props.date} Author: {props.author}</Typography>
         </div>
     )
 }

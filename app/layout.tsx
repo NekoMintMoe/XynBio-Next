@@ -1,6 +1,5 @@
 import HeaderLay from "@/core/layouts/Header"
 import FooterLay from "@/core/layouts/Footer"
-import "../styles/globals.css"
 
 export default function RootLayout({
   children,

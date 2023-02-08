@@ -17,7 +17,8 @@ const PostMetadata = (): PostMetadata[] => {
             date: metadata.data.date,
             author: metadata.data.author,
             keyword: metadata.data.keyword,
-            slug: fileName.replace(".md", "")
+            slug: fileName.replace(".md", ""),
+            content: metadata.content
         }
     })
 

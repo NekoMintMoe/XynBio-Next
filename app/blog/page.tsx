@@ -1,7 +1,7 @@
 import PostMetadataFunc from '@/core/functions/blog/PostMetadata'
 import PostPreviewListLay from '@/core/layouts/blog/PostPreviewList'
 
-const PostPage = () => {
+const BlogPage = () => {
     const postMetadata = PostMetadataFunc()
     const postPreviewList = postMetadata.map((metadata) => (
         <PostPreviewListLay key={metadata.slug} {...metadata} />
@@ -9,4 +9,4 @@ const PostPage = () => {
     return <div>{postPreviewList}</div>
 }
 
-export default PostPage
+export default BlogPage

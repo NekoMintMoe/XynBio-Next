@@ -1,13 +1,15 @@
+'use client'
 import Link from "next/link"
+import { Typography } from '@mui/joy'
 
 const Header = () => {
     return (
       <header>
         <div>
-          <Link href="/home">
-            <p className="text-3xl font-bold text-pink-400">XynBio Next</p>
+          <Link href="/home" style={{ textDecoration: 'inherit' }}>
+            <Typography fontSize="xx-large" textColor="#5BCEFA">XynBio Next</Typography>
           </Link>
-          <p className="text-2xl font-bold text-blue-400">NextJS!</p>
+          <Typography fontSize="x-large" textColor="#F5A9B8">NextJS!</Typography>
           <br />
         </div>
       </header>
