@@ -1,9 +1,5 @@
-import Link from "next/link"
+import { redirect } from 'next/navigation';
 
-const Index = () => {
-    return (
-        <meta httpEquiv="refresh" content="0;url=/home" />
-    )
+export default async function Index () {
+    redirect('/home')
 }
-
-export default Index
