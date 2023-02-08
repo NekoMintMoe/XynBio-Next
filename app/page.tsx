@@ -1,5 +1,7 @@
 import { redirect } from 'next/navigation';
 
-export default async function Index () {
+const Index = () => {
     redirect('/home')
 }
+
+export default Index
