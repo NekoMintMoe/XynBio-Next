@@ -5,6 +5,7 @@
 - NodeJS 18
 - NextJS 13
 - Tailwind 3
+- Auth.JS Exp
 
 ### Get Start
 
