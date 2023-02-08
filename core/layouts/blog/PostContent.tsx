@@ -1,9 +1,8 @@
 'use client'
 import MuiMarkdown from 'mui-markdown';
-import PostContentFunc from '@/core/functions/blog/PostContent'
 import { Typography } from '@mui/joy'
 
-const PostContent = (props: PostContentFunc) => {
+const PostContent = (props: any) => {
     return (
         <div>
             <Typography fontSize="xl">{props.title}</Typography>
