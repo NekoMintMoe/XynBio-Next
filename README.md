@@ -4,6 +4,7 @@
 
 - NodeJS 18
 - NextJS 13
+- TurboRepo
 - Tailwind 3
 - Auth.JS Exp
 
