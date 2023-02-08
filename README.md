@@ -5,7 +5,6 @@
 - NodeJS 18
 - NextJS 13
 - TurboRepo
-- Auth.JS Exp
 
 ### Get Start
 
