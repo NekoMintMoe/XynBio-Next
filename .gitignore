@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# TurboRepo
+/.turbo/
+
 # production
 /build
 
@@ -36,4 +39,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Visual Studio Code
-.vscode
+/.vscode/
