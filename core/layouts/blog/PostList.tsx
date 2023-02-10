@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { Typography } from '@mui/joy'
 
-const PostPreviewList = (api: any) => {
+const PostList = (api: any) => {
     return (
         <div>
             <Link href={`/blog/${api.metadata.slug}`}>
@@ -14,4 +14,4 @@ const PostPreviewList = (api: any) => {
     )
 }
 
-export default PostPreviewList
+export default PostList
