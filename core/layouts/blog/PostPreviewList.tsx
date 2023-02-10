@@ -3,14 +3,14 @@ import Link from 'next/link'
 import PostMetadataFunc from '@/core/functions/blog/PostMetadata'
 import { Typography } from '@mui/joy'
 
-const PostPreviewList = (props: PostMetadataFunc) => {
+const PostPreviewList = (api: any) => {
     return (
         <div>
-            <Link href={`/blog/${props.slug}`}>
-                <Typography fontSize="xl">{props.title}</Typography>
+            <Link href={`/blog/${api.metadata.slug}`}>
+                <Typography fontSize="xl">{api.metadata.title}</Typography>
             </Link>
-            <Typography>Subtitle: {props.subtitle}</Typography>
-            <Typography>Date: {props.date} Author: {props.author}</Typography>
+            <Typography>Subtitle: {api.metadata.subtitle}</Typography>
+            <Typography>Date: {api.metadata.date} Author: {api.metadata.author}</Typography>
         </div>
     )
 }

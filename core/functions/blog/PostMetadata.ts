@@ -1,28 +1,12 @@
-import { PostMetadata } from "@/core/modules/PostMetadata"
-import fs from 'fs'
-import matter from "gray-matter"
+import { ListData } from "@/core/modules/BlogData"
+import axios from "axios"
 
-const PostMetadata = (): PostMetadata[] => {
-    const folder = "posts/blog"
-    const files = fs.readdirSync(folder)
-    const mdPosts = files.filter((file) => file.endsWith(".md"))
-
-    // Get metadata from each post.
-    const postMetadata = mdPosts.map((fileName) => {
-        const mdContent = fs.readFileSync(`posts/blog/${fileName}`, "utf8")
-        const metadata = matter(mdContent)
-        return {
-            title: metadata.data.title,
-            subtitle: metadata.data.subtitle,
-            date: metadata.data.date,
-            author: metadata.data.author,
-            keyword: metadata.data.keyword,
-            slug: fileName.replace(".md", ""),
-            content: metadata.content
-        }
-    })
-
-    return postMetadata
+const DataAPI = async (): Promise<ListData> => {
+    const res = await (await axios.get(`${process.env.DATA_API_URL}/api/blog`)).data
+    return {
+        code: res.code,
+        data: res.data,
+    }
 }
 
-export default PostMetadata
+export default DataAPI
