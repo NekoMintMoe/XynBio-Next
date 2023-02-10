@@ -1,10 +1,10 @@
-import PostMetadataFunc from '@/core/functions/blog/PostMetadata'
-import PostPreviewListLay from '@/core/layouts/blog/PostPreviewList'
+import PostMetadataFunc from '@/core/functions/blog/PostList'
+import PostListLay from '@/core/layouts/blog/PostList'
 
 const BlogPage = async () => {
     const api = await PostMetadataFunc()
     const postPreviewList = (api.data.map((data) => (
-        <PostPreviewListLay key={data.metadata.slug} {...data} />
+        <PostListLay key={data.metadata.slug} {...data} />
     )))
     return <div>{postPreviewList}</div>
 }
