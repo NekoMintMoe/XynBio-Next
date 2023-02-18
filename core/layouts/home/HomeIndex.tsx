@@ -1,10 +1,11 @@
+'use client'
 import Link from 'next/link'
 import { Typography } from '@mui/joy'
 
 const HomeIndex = () => {
     return (
         <Link href="/blog">
-            <p className="text-5xl font-bold">GOTO BLOG</p>
+            <Typography>GOTO BLOG</Typography>
         </Link>
     )
 }
