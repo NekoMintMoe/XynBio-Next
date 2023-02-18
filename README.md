@@ -3,16 +3,19 @@
 ### Environment
 
 - NodeJS 18
+- Yarn Global
 - NextJS 13
 - TurboRepo
+- FireBase
+- API Worker
 
 ### Get Start
 
 Start Dev Server
 
 ```shell
-npm install
-npm run dev
+yarn
+yarn dev
 ```
 
 ### License
