@@ -32,7 +32,7 @@ export const verifyJWT = async (token: string) => {
     if (!jwt) {
         return "invalid"
     }
-    if (jwt.payload.issuer !== process.env.NEXT_WEB_URL) {
+    if (jwt.payload.issuer !== process.env.DATA_API_URL) {
         return "invalid"
     }
     const jwtExp = jwt.payload.exp??0
@@ -45,6 +45,6 @@ export const verifyJWT = async (token: string) => {
 
 // JWT Data Structure
 export const genJWT = async (audience: string, action: string, scope: string) => {
-    const data = { issuer: process.env.DATA_API_URL, audience: audience, action: action, scope: scope }
+    const data = { issuer: process.env.NEXT_WEB_URL, audience: audience, action: action, scope: scope }
     return data
 }
